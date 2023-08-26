@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>BuscaCep</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">BuscaCep</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>-->
+
+<div class="campos"> 
+ <form> 
+    <ion-list>
+
+      <ion-item>
+        <ion-input label="CEP: "></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Estado: "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Cidade: "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Bairro: "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Rua: "></ion-input>
+      </ion-item>
+
+    </ion-list>
+  </form>
+</div>
+
+{{ cep | json }}
+
+<ion-button color="dark" (click)="buscaCEP()">confirmar</ion-button>
+
+
