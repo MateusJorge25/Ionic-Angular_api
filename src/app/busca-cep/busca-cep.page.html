@@ -13,33 +13,60 @@
   </ion-header>
 </ion-content>-->
 
-<div class="campos"> 
- <form> 
+<!--<ion-button id="present-alert">mostrar erro</ion-button>-->
+<!--<ion-alert-->
+<!--  trigger="present-alert"-->
+<!--  header="Erro"-->
+<!--  message="CEP não encontrado"-->
+<!--&gt;</ion-alert>-->
+
+<div class="campos">
+ <form [formGroup]="adressForm" role="form">
     <ion-list>
 
       <ion-item>
-        <ion-input label="CEP: "></ion-input>
+        <ion-input
+          (ionChange)="buscaCEP()"
+          formControlName="cep"
+          type="text"
+          label="CEP: "></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input label="Estado: "></ion-input>
+        <ion-input
+          formControlName="estado"
+          [disabled]="true"
+          type="text"
+          label="Estado: "></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input label="Cidade: "></ion-input>
+        <ion-input
+          formControlName="cidade"
+          [disabled]="true"
+          type="text"
+          label="Cidade: "></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input label="Bairro: "></ion-input>
+        <ion-input
+          formControlName="bairro"
+          [disabled]="true"
+          type="text"
+          label="Bairro: "></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input label="Rua: "></ion-input>
+        <ion-input
+          formControlName="rua"
+          [disabled]="true"
+          type="text"
+          label="Rua: "></ion-input>
       </ion-item>
 
     </ion-list>
   </form>
 </div>
 
-{{ cep | json }}
+<!--{{ cep | json }}-->
 
-<ion-button color="dark" (click)="buscaCEP()">confirmar</ion-button>
+<!--<ion-button color="dark" (click)="buscaCEP('14887474')">confirmar</ion-button>-->
 
 
